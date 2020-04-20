@@ -1,0 +1,159 @@
+// 第五档位
+@media screen and (min-width: 1280px) {
+  .container{
+    width: 1280px;
+  }
+}
+
+//头部
+
+header{
+  margin-left: -15px;
+  .logo{
+    background-color: blue;
+    display: block;
+    img{
+      // 如果图比父盒子大,默认是会溢出的
+      //width: 100%; ctrl d 快速复制一行  ctrl c 复制   ctrl v  粘贴
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    div{
+      // logo 上的文字 不需要被用户看见,有利于搜索引擎优化(SEO SEM)
+      display: none;
+      height: 30px;
+      color: #fff;
+      line-height: 30px;
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+
+  nav {
+    border-bottom: 1px solid #222222;
+    a{
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      background-color: #cccccc;
+      padding-left: 30px;
+      &:hover{
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+// 导航的meitichaxun
+
+@media screen and (max-width: 991px) {
+  nav{
+    margin-bottom: 10px;
+    a{
+      width: 20%;
+      float: left;
+      &:hover{
+        background-color: pink;
+      }
+    }
+  }
+}
+
+
+
+
+.top {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+  a{
+    display: block;
+    float: left;
+    width: 25%;
+    height: 133px;
+    position: relative;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.8);
+      width: 100%;
+      margin: 0;
+      font-size: 12px;
+      color: #ffffff;
+      padding: 5px;
+    }
+  }
+
+  a:nth-child(1){
+    width: 50%;
+    height: 266px;
+    p{
+      font-size: 24px;
+    }
+  }
+}
+
+//图片的 媒体查询
+
+@media screen and (max-width: 767px) {
+  .top{
+    a{
+      width: 50%;
+    }
+
+    a:nth-child(1){
+      width:100%
+    }
+
+  }
+}
+
+//新闻
+
+.news{
+  .one{
+    border-bottom: 1px solid #cccccc;
+    img{
+
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+
+// 联盟
+
+.lian_m {
+  display: block;
+  img{
+    width: 100%;
+  }
+}
+
+.hot{
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
