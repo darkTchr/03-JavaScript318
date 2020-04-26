@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var a = 5;
+
+    //       (false)   ||   (true)    &&   (false)
+    //          false  &  10                           5  || 7  &&  0
+
+    var res = (!true & !!(a * 2)) || !(5 > 3 || 3 > 6) && (!!a++ || !!(++a) && !!0)
+    console.log(res);
+
+
+    //得到数字
+
+    console.log(5 > 3 && 2 > 3);
+    console.log( 0  &&  6); // ?  false?
+    console.log( 6  &&  0  && 1  && 2); // 说明  遇到满足停止条件的位置 , 是数字的时候 , 直接返回这个数字
+    console.log( 0 || 2 || '' || false);
+
+</script>
+</body>
+</html>

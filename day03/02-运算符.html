@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //逻辑运算符   &&  与,和  并且 并列关系  || 或  或者   !  非  不  取反
+    //     true  &&  false    遇false则整体为false
+    // console.log(5>3  &&  3>5 && 2>1 && 3>2);
+    // //     遇true则整体为true
+    // console.log(5<3  ||  3>5 || 2>1 || 3<2);
+    // console.log( !5>3 );
+
+    //   &  |
+
+    var a = 666;
+    // 非0  非false  非 ''  非特殊值  都为true
+
+    // console.log(Boolean(a++));
+    //          false  &  true
+    // console.log(5<3 && a++ );  // false
+    // console.log(a);
+
+    // console.log(5>3 || a++ );
+    // console.log(a);
+
+    //   !    得到任何值的 真实布尔类型值
+
+    a = "abc";
+    a = "";
+
+    console.log(!!a); //双重否定变肯定
+
+
+    //比较运算符    结果是boolean
+    var a = "100";
+    var b = 100;
+
+    // console.log(a > b);
+    console.log(a == b);  // 不考虑数据类型的情况下 , 你俩的值相等不?
+    console.log(a === b);  // 考虑数据类型的情况下 , 你俩的值相等不?
+    //!  取反  不  非
+    // !=  不等
+    console.log(a != b);   // ==
+    console.log(a !== b);   // ===
+
+
+    // 赋值运算符
+    // -=  *=  /=  %=
+    //  +=  ---->    先加后等   ----->  先运算加法 , 再讲结果作为值 复制给 变量
+    var num = 6;
+
+    num += "7";  //   num = num + 7;
+
+    console.log(num);
+
+    //  一元运算符     ++  --
+
+    //  元 = 元 + 1
+
+    var num = "5";
+    // num++    单独使用  +1  -1
+    // num++;  // 不拼接了 , 自增 , 所以会想尽一切办法达到自曾的目的 , 增加不了 , 就 太难了
+    ++num;
+    console.log(num)
+
+    //  参与了其他行为 (赋值   运算  等...)
+    // num  =  6
+    //   9?   看执行代码时 先遇到谁 , 先遇到++ 才先自身加1  ,
+    //   先遇到 自身变量 , 就先去变量里的值拿去运算,再自增1 , 增加1之后 , 不会影响之前的运算了
+    //     6 (num = 7)  +  2  = 8
+    // num = num++ + 2;
+    //
+
+    //      7 + 2 = 9
+    // num = ++num + 2;
+    // console.log(num)
+
+
+    num = num++;  // 6 复制给 num   ,   ++ num+1 ?   最终谁生效
+    console.log(num);
+    //   --------------------------------------------------
+
+
+    //                 2  +   3
+    var a = 1;
+    var b = ++a + ++a;
+    console.log(b);  //
+    //                 1(2) + 3
+    var a = 1;
+    var b = a++ + ++a;
+    console.log(b);  //
+    //                  1  +  2(3)
+    var a = 1;
+    var b = a++ + a++;
+    console.log(a, b);  //
+    //                  2  +  2(3)
+    var a = 1;
+    var b = ++a + a++;
+    console.log(a, b);  //
+
+
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    /*
+    1. 接收用户输入两个数字，求两个数的最大数。
+    2. 接收用户输入一个数字，判断一个数是偶数还是奇数
+    3. 分数转换，把百分制转换成ABCDE   <60  E  60-70 D  70-80 C  80-90 B  90 - 100 A
+    4. 当点击确定，弹出消息提示“您已退出” 当点击取消  弹出消息“您已取消退出”
+    * */
+
+
+    // alert  undefined
+    // confirm  true  false
+    // prompt   取值   null
+
+    //   3
+
+    var res = confirm("你确定要退出吗?");
+    if (res) { //t
+        alert("您已成功退出系统!!!")
+    }
+    if (res) { //t    debug  调试
+
+        var num1 = prompt("请输入第一个数字:");
+        // console.log(typeof num1 , typeof 4);
+        //判断数据类型是不是 number
+
+        console.log(num1 - 0);  // true    NaN
+        //  666(true)   NaN(false)
+        if (num1 - 0) {
+            //判断奇偶
+            // var res = num1 % 2 === 0  ? "偶数" : "奇数"
+
+            var num2 = prompt("你输入的是纯数字,是" + (num1 % 2 === 0 ? "偶数" : "奇数") + ",请输入第二个数字:");
+            if (parseFloat(num2)) {
+                //   num1 > num2 ? num1 :num2
+                alert("两个数字输入完毕,最大值是:" + (num1 > num2 ? num1 : num2))
+            } else {
+                //第二个不是数字
+            }
+        } else {
+            //第一个不是数字
+        }
+    }
+
+
+</script>
+</body>
+</html>

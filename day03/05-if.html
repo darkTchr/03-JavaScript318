@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //判断语句  如果
+    // if(条件){
+    //     满足条件才执行的代码
+    // }
+
+    var a = 100;
+    if (5 > a) {
+        console.log('成立');
+    }
+    console.log(a);
+    //  -------------------------
+
+    if (5 > a) {
+
+        a = 666;
+        console.log('满足了if')
+    } else { //  5 <= a  //否则  , 是对 if后面的条件取反 , 判断是否满足
+        a = 999;
+        console.log("满足了else")
+    }
+
+    console.log(a);
+    //    -------------------------
+
+    if( a > 18){  //a>18
+
+    }else if(a == 18){   //a = 18
+
+    }else{ // a < 18  --->  >10?
+        if(a > 10){
+            console.log('a<18  &&  a>10')
+        }else{
+            console.log("a<18  &&  a<= 10 ")
+        }
+    }
+
+
+</script>
+</body>
+</html>

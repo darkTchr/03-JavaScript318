@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //计算总工资(总工资 = 基础工资 + 绩效工资)  --> 交互 , 基本工资让用户自己输入.
+    var jc = 8000; // 基础工资,不允许自定义
+    var jx = prompt("请输入本月绩效考核薪资:") - 0; //  返回值  string
+    console.log(jx);
+    // jx = Number(jx);// 如果jx不是纯数字字符串, 会得到NaN
+    // jx = parseFloat(jx);
+    var money = jc + jx; // 想办法将 jx  的数据类型改成number
+    console.log(money);
+
+    // ---------------------------------------------
+
+
+    //用户任意输入一个三位数，求这个三位数字百位，十位，个位 及  他们的和。
+
+    var num = prompt("请输入三位数 , 警告你最好是整数!") - 0;
+    console.log(num);
+    // 123 / 10  = 12.3  ?  余数?  %
+    var ge = num % 10;
+    var shi = parseInt(num / 10) % 10;//2   12 / 10 = 12.3(12)   123 / 100
+    var bai = parseInt(num / 100);
+    var sum = ge + shi + bai;
+    console.log(sum)
+</script>
+
+</body>
+</html>
