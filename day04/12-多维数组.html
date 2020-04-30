@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //多维数组
+
+    var arr = [1,2,["a","b","c"],4,5];//二维
+
+    //递归 时解决
+    for(var i = 0 ; i <= arr.length - 1 ; i++){
+        // arr[i]
+        console.log(arr[i]);
+        if( i === 2){
+            for(var j = 0 ; j <= arr[i].length -1 ; j++){
+                console.log(arr[i][j]);
+            }
+        }
+    }
+
+
+    console.log(arr[0][2][4][2][1]);
+</script>
+</body>
+</html>

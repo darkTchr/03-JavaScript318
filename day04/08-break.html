@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //break  停止循环
+
+    for(var i = 1; i < 10 ; i++){
+        if(i === 6){
+            break;
+        }
+        // console.log(i);
+    }
+
+
+    //  扩展 ： 给for起别名
+
+
+    A:for(var k = 1 ; k <= 3 ; k++){
+        console.log(k , "-------"); // 1
+        B:for(var j = 1 ; j<= 3 ; j++){
+            console.log(j); //12
+            if(j === 2){
+                break A;
+            }
+        }
+    }
+
+    //  流水账    循环   判断
+
+
+</script>
+</body>
+</html>

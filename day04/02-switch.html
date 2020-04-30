@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //switch     做判断
+    var num = "666";
+    //注意事项
+    // 实际上是   ===  值和数据类型 都一样
+    switch (num) {
+        case 666:
+            alert('666');
+            break;
+        case 999:
+            alert('999');
+            break;
+        default:
+            alert('没匹配上 , 发生了case穿透');
+            break;
+    }
+
+    // switch  不能做范围判断吗？  num > 0   true | false
+
+    switch (num > 0) {
+        case true :
+            alert(">0");
+            break;
+        default  :
+            alert(" = 0");
+            break;
+    }
+
+
+    // switch (/*表达式 || 需要判断谁*/) {
+    //     /* 情况 ，不是做范围匹配 ， 而是做具体值的匹配 */
+    //     /* 只会匹配一个case */
+    //     case 666 : //你是666吗？
+    //         //  逻辑代码
+    //         break;
+    //
+    //     case 777 : //你是666吗？
+    //         //  逻辑代码
+    //         break;
+    //
+    //     case 888 : //你是666吗？
+    //         //  逻辑代码
+    //         break;
+    //     default :
+    //         //当所有case都没有匹配上 ， 走default
+    //         break;//停止  ，* 跳出
+    // }
+</script>
+
+</body>
+</html>

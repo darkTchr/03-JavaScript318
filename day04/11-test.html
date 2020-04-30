@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //给一个不重复的数字数组，求最大值和最大值的在数组中的位置
+
+
+    var arr = [34, 67, 213, 90, 565, 8365];
+    //思想（打擂台）
+    var max = arr[0]; //模拟的最大值
+    var index = 0;//位置 下标
+
+    for(var i = 0 ; i<= arr.length-1 ; i++){
+        // arr[i]
+        if(arr[i] > max){
+            max = arr[i];
+            index = i;
+        }
+    }
+
+    console.log(max, index);
+
+
+
+
+
+
+
+
+
+    //统计班级学生就业薪资，计算总薪资 和 平均薪资
+    // 1024b  = 1k
+    var arr = [18000, 14000, 12000, 24000, 2500];
+    var sum = 0;//和
+    console.log(arr.length);
+
+    for (var i = 0; i < arr.length; i++) {
+        // sum = 0 + 1
+        // sum =        + 2
+        // sum =            + 3
+        sum += arr[i];  // sum =  sum + arr[i]
+    }
+    alert(sum / arr.length); // ?  要是 200多人怎么办？
+
+    // 值得个数  arr.length
+
+
+</script>
+</body>
+</html>

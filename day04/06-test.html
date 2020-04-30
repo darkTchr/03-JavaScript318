@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--<table border="1" cellspacing="0" cellpadding="10">-->
+<!--    <tr>  行  -->
+<!--        <td>  格  列    1 X 1 = 1</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>1 X 2 = 2</td>-->
+<!--        <td>2 X 2 = 4</td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+
+<script>
+
+    //直角三角形
+
+    document.write('<table class="" border="1" cellspacing="0" cellpadding="10">');
+    for (var i = 1; i <= 9; i++) {  // 控制有几行 ， 就几对 <tr></tr>
+        // if(i % 2 === 0){}else{}
+        document.write("<tr>");
+
+        //   这里就是 每一行要做的事情 ， 就是 tr里面要夹的 东西
+        for(var k = 1; k<= i ; k++){
+            document.write("<td>");
+            // 算式
+            document.write(i + "x" + k + "=" + (i * k));
+            document.write("</td>");
+        }
+
+
+        document.write("</tr>");
+    }
+
+
+    document.write('</table>')
+
+
+    document.write("<hr>");
+
+
+    for (var num = 1; num <= 9; num++) { // num = ？ 就是第几行
+        // 每行要做的事情
+        for (var i = 1; i <= num; i++) {
+            //num x i =  num * i
+            document.write(num + " X " + i + " = " + (num * i) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");  //  ____ 距离
+        }
+        document.write("<br>");
+    }
+
+    document.write("<hr>");
+
+    //行数 ， 另起一行
+    for (var num = 1; num < 8; num++) { // num = ？ 就是第几行
+        // 每行要做的事情
+        for (var i = 1; i <= num; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
