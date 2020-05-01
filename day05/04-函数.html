@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // var bl;
+        // function fn(num)  我已经知道有一个 函数被创建了 , 并且参数位置有没有,我也知道了
+
+        // 函数 , 方法 
+        // 将 零散的 有着特定完整功能的 代码 装起来 , 为了方便以后多次重复使用
+
+        // function 函数名(形式参数){}
+        // 函数名(实际参数)
+
+        // return关键字 , 2个作用  : 能停止函数 : 返回一个值
+
+        function myFn(num){
+
+            if(true){
+                return "函数停止了";
+            }
+
+            console.log(num);
+        }
+
+
+        //使用函数  调用函数 就是叫他的名字 , 大括号开始之前 , 格式和创建时保持一致
+
+        console.log(myFn(123456));
+
+
+
+        var res = getSum(4,5);
+        console.log(res);
+
+        //  求和
+        function getSum(num1,num2){
+            return num1 + num2
+        }
+        
+        // 函数的其他创建方式
+
+        // var fn = function(){
+        //     console.log('我是fn函数');
+            
+        // }
+
+        //函数名 就代表 整个函数体 (完整的函数代码)
+        // console.log(fn);
+
+        //类似Array   new Array()
+        // 函数调用 不受位置限制
+        // fn1();
+
+        // console.log(fn1);
+
+        var fn1 = new Function("alert(999)");
+
+        console.log("-------======================-------");
+        
+
+
+        //这种 在函数被创建之前 也能正常调用 的现象, 我们叫做 , 预解析
+        
+        // 变量 和  函数
+
+        // 变量 被创建 但没赋值 才是 undefined  
+        // 变量遇到预解析 , 会将 var创建的 容器提升至最前面
+
+        // console.log(bl); // undefined
+        // var bl = 888;
+
+        // 函数遇到了预解析 , 会将 {}之前的提升到最前面 , 不关注函数体 , 
+        // 什么时候遇到了调用, 在于关注函数提里面到底要干什么
+
+        fn(1243);
+
+        // arguments , 可以拿到所有传进来的参数
+        function fn(num){
+            // console.log(num);
+            // console.log(arguments);
+
+            var max = arguments[0];
+            for(var i = 0 ; i < arguments.length ; i++){
+                
+                // console.log(arguments[i]);
+                if(arguments[i] > max ){
+                    max = arguments[i];
+                }
+                
+            }
+            return max;
+            
+        }
+
+        
+        console.log(fn(1,2,3333,4));
+        
+        
+
+        //  匿名函数 , 作用域
+
+        // function(){
+        //     console.log(66666);
+        // }
+
+        // 匿名函数自调用 , 只能用一次
+        (function(num){
+            console.log(num);
+        })(98765)
+
+        //函数 有效的区域 , {}夹起来的 叫做一个作用域 , 在作用于里面创建的变量外面用不了,像极了参数,{}意外用不了
+
+        function fn3(){
+            var a = 5;
+            console.log(a);
+        }
+
+        fn3();
+
+        console.log(a);
+
+        var b = 6;//全局作用域
+
+
+        //  作用域链 : 就是当函数嵌套的时候 , 产生的查找的路径
+        //  柯里化 : 当调用函数时 出现 fn()()()()()()
+        
+        //  引出: 沙箱和闭包
+        
+
+
+        
+
+        
+
+        
+
+    </script>
+</body>
+</html>

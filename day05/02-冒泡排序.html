@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //冒泡
+
+        var arr = [5,1,2,4,5];
+        var count = 0; //计数器思想
+
+        // 控制 次数
+        A:for(var i = 1 ; i <= arr.length-1; i++){ // 1  -  4
+            //arr[i] 每一个值
+            //嵌套for 为了和每一个值 先比较一遍 , 才能换下一个数(A)
+            //arr.length - i 
+            B:for(var j = 0 ; j < arr.length - i  ;j++){
+                if(arr[j] > arr[j+1]){
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+                count++;// 不是交换次数 , 比较的次数
+            }
+        }
+
+        console.log(arr , count);
+        
+    </script>
+</body>
+</html>

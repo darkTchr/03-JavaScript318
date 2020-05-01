@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //- 练习6：给一个数字数组，该数组中有很多数字0，将不为0的数据存入到一个新的数组中【作业】
+
+        var arr = [0,12,0,13,0,14,0,15];
+        var newArr = [];
+        var index = 0;
+
+        //遍历
+        for(var i = 0 ; i < arr.length ; i++){
+            //arr[i]
+            if(arr[i] !== 0 ){
+                //不是0 ,寻到newArr
+                newArr[index] = arr[i];
+                index++;
+            }
+        }
+
+        console.log(newArr);
+        
+
+        // - 练习7：给一个数组，将数组中的数据反转，存放到一个新的数组中。
+
+        arr = [1,2,3,4,5];
+        //arr.length-1  最大索引值, 最后一个值得索引
+
+        // arr[0]  ----   arr[arr.length-1-0]
+        // arr[1]  ----   arr[arr.length-1-1]
+        // arr[2]  ----   arr[arr.length-1-2]
+
+        for(var i = 0 ; i < arr.length / 2 ;i++){
+            // 交换两个变量的值
+            var temp = arr[i];
+            arr[i] = arr[arr.length-1-i];
+            arr[arr.length-1-i] = temp;
+        }
+
+        console.log(arr);
+        
+
+    </script>
+</body>
+</html>

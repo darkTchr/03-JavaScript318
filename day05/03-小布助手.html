@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        while(true){
+            var res = prompt("请输入指令: 1:显示当前时间 \n\r 2:猜拳 \n\r 输入q随时退出程序");
+            if(res === 'q'){
+                alert('你已经不爱小布了吗?')
+                break;
+            }
+
+            switch(res){
+                case "1" :
+                //时间
+                var date =  new Date(); 
+                alert("当前时间:"+date.getFullYear()+"年"+ (date.getMonth()+1)+ "月" + date.getDate() +"日");
+                break;
+                case "2":
+                //猜拳
+                var user = prompt("请出拳:  \n\r 1:石头 \n\r 2:布 \n\r 3: 剪刀");
+                //想获取随机数  Math.random()*3 能得到  >=0  < 3 的随机数  [1,2,3]
+                // parseInt(Math.random() * 3)  // 0  1  2 是随机下标
+                var quan = [1,2,3];
+                var xb = quan[parseInt(Math.random() * 3)]
+
+                switch(user){
+                    case "1": //石头
+                        if(xb === "1"){
+                            // 平局
+                        } else if(xb === "2"){
+                            //xb赢了
+                        }else{
+                            //user赢了
+                        }
+                }
+
+                alert("系统出的是:" + xb + ", 你出的是:" + user + "赢了");
+
+
+                break;
+                default: 
+                alert("小布不能明白你要做什么 , 请重新选择");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
