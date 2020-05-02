@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var hero = {
+            name:"亚瑟",
+            age:18,
+            gender:"男",
+            wuqi:"刀",
+            run:function(){
+                console.log('使用了一技能');
+                
+            },
+            gj:function(){
+                console.log('二技能 , 有东西再转 , 攻击你');
+                
+            }
+        }
+
+        // 遍历对象  独特的for
+        for(var key in hero){
+            //注意 不能用  . 
+            console.log(key,":",hero[key]);
+        }
+
+        //通过构造函数创建3个对象，并将3个对象放到数组中，最后再将数组中每一个对象的信息输出
+        function People(name,age){
+            // this  这个 , 代表当前自己(一会呗创建出来的对象)
+            this.name=name;
+            this.age=age;            
+        }
+
+        var p1 = new People('耀',19);
+        var p2 = new People('镜',18);
+        var p3 = new People('瑶',16);
+
+        var heroArr = [p1,p2,p3];
+
+        for(var i = 0 ; i < heroArr.length ; i++){
+            //heroArr[i]   每一个英雄对象{}
+
+            for(var k  in heroArr[i]){
+                console.log("第"+(i+1)+"个英雄:"+heroArr[i]['name']+",今年"+heroArr[i]['age']+"岁");
+            }
+        }
+    </script>
+</body>
+</html>

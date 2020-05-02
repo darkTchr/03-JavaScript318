@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 作用域链   沙箱  闭包  柯里化
+        // js 版本中 只有函数{}
+
+        var a = 666;
+        function fn1(){
+            // var a= 1;
+            fn2();
+            function fn2(){
+                // var a= 2;
+                fn3();
+                function fn3(){
+                    // var a = 3;
+                    console.log(a); // 就近原则
+                }
+            }
+        }
+
+        fn1();
+
+        //沙箱:独立运行的空间 , 里外互不影响
+
+        var num = 2;
+
+        (function(){
+            var num = 1;
+            console.log(num);
+            // .... 
+        })()
+
+        // 闭包  为了解决 数据缓存问题
+
+        function fn(){
+            var a = 123000;
+            return function(){
+                return function(){
+                    return function(){
+                        console.log(a);
+                    }
+                }
+            }
+        }
+
+        var res = fn();
+        // console.log(res);
+
+        res();
+
+        //柯里化
+
+        fn()()()()
+
+        // 预解析
+
+
+        function  fn6(){
+            console.log('func');
+            
+        }
+
+        var fn6 = function(){
+            console.log('var');
+            
+        }
+
+        fn6()
+        
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

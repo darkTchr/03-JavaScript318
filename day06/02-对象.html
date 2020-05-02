@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // js是弱类型语言 
+        //对象 (实例)  实实在在的东西  看得见摸得着  真实存在 (万物皆对象)
+
+        //面向对象              (面向过程)
+        //三大特性 : 封装  (继承  多态)
+
+        //js 不是一个面向对象的语言 , 是 基于 面向对象思想的语言
+
+
+        //  new Array()   new Function()    创建对象
+
+        //对象中  都是 名字:值 这种格式 , 多个 用,分割
+        var obj = {
+            name:"jack",
+            age:18,
+            sayHi:function(){
+                console.log('你们好,我说话了!');
+            }
+        };
+
+        //创建一个英雄对象【姓名，年龄，性别，武器，逃跑技能，攻击别人】
+
+        var hero = {
+            name:"亚瑟",
+            age:18,
+            gender:"男",
+            wuqi:"刀",
+            run:function(){
+                console.log('使用了一技能');
+                
+            },
+            gj:function(){
+                console.log('二技能 , 有东西再转 , 攻击你');
+                
+            }
+        }
+
+        //  ___:___  键值对  键名
+
+        console.log(hero["name"]);
+        console.log(hero.name);
+
+        console.log(hero);
+
+        hero.run();
+
+        // object 创建
+
+        var obj = new Object();
+
+        obj.name = '后羿';
+        obj.skill=function(){
+            console.log('三技能大鸟 , 把你眩晕');
+            
+        }
+        console.log(obj);
+        
+
+        //当我们 需要重复创建对象这种操作 , 将功能封装 , 工厂模式
+
+
+        function heroFactroy(name,gender,skill){
+            var obj = new Object();
+            obj.name= name;
+            obj.gender= gender;
+            obj.skill= skill;
+            return obj;
+        }
+
+        var anqila = heroFactroy("安琪拉","女",function(){
+            console.log('大火球,231连招');
+        })
+
+        console.log(anqila);
+        anqila.skill();
+
+
+        // 构造函数 创建
+        // 构造函数 : 就是 首字母大写的 普通function (约定俗成)
+
+        function People(name,age){
+            // this  这个 , 代表当前自己(一会呗创建出来的对象)
+            this.name=name;
+            this.age=age;
+            console.log(this);
+            
+        }
+
+        // People('qwe',12);
+
+        // var p1 = new People('诸葛亮',44);
+
+        // console.log(p1);
+        // var p2 = new People('妲己',22);
+
+        // console.log(p2);
+        
+        
+    </script>
+</body>
+</html>

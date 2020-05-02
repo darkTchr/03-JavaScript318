@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = 'jack';
+        var hero = {name:'典韦',age:38}
+        var age = 99;
+
+        function fn(name){
+            name = 2345678;
+            // name = '武则天';
+            // hero.name = name;
+
+            // hero地址值.age = 16;
+            name.age = 16;
+        }
+
+
+        fn(age);
+
+        console.log(age);
+
+        // fn(hero.name);
+        // console.log(hero.name);
+
+        // fn('武则天');
+        // console.log(hero.name);
+
+        // fn(hero地址值)
+        fn(hero)
+        console.log(hero.age);
+
+
+        console.log('---------------------');
+function Person ( name, age ) {
+    this.name = name;
+    this.age = age;
+    this.sayHi = function () {
+        console.log( "你好" );
+    }
+}
+
+var p1 = new Person(" 张三 ", 18);
+
+function getperson ( person ) {
+    person.name = "李四";  // 把张三变李四
+    person = new Person("王五",20); //地址值被换了
+    console.log(person.name);  // 新对象的name
+}
+
+getperson(p1);
+console.log(p1.name);    //思考： p1.name 输出的结果是什么？
+
+console.log('---------------------');
+
+function getary ( ary ) {
+    ary[0] = -1;
+}
+
+var newary = [1,2,3];
+
+getary( newary );
+console.log( newary[0] );
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>
